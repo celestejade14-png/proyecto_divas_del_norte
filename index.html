@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divas del Norte | Salón &amp; Spa</title>
+  <meta name="description" content="Divas del Norte, Salón &amp; Spa. Reserva tu cita en línea: cortes, tintes, manicure, pedicure, peinados y maquillaje.">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('ddn-theme');
+      if (saved === 'dark') document.documentElement.classList.add('dark-mode');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="#top" class="brand" aria-label="Divas del Norte, inicio">
+        <svg class="brand-compass" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" class="compass-ring"/>
+          <path class="compass-star" d="M50 8 L58 42 L92 50 L58 58 L50 92 L42 58 L8 50 L42 42 Z"/>
+          <circle cx="50" cy="50" r="4" class="compass-dot"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Divas del Norte</span>
+          <span class="brand-sub">Salón · Spa</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#top" class="nav-link" data-section="top">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link" data-section="servicios">Servicios</a></li>
+        <li><a href="#reserva" class="nav-link" data-section="reserva">Reserva</a></li>
+        <li><a href="#contacto" class="nav-link" data-section="contacto">Contacto</a></li>
+        <li><a href="#ubicacion" class="nav-link" data-section="ubicacion">Ubicación</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><g stroke-linecap="round"><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></g></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO — solo tipografía y gráficos, sin fotografías ===================== -->
+    <section class="hero" id="inicio">
+
+      <!-- Formas decorativas suaves -->
+      <span class="hero-blob hero-blob--coral" aria-hidden="true"></span>
+      <span class="hero-blob hero-blob--gold" aria-hidden="true"></span>
+      <span class="hero-ring" aria-hidden="true"></span>
+
+      <div class="hero-content">
+
+        <div class="hero-mark" aria-hidden="true">
+          <svg class="hero-compass" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" class="compass-ring"/>
+            <path class="compass-star" d="M60 10 L70 50 L110 60 L70 70 L60 110 L50 70 L10 60 L50 50 Z"/>
+            <circle cx="60" cy="60" r="5" class="compass-dot"/>
+            <text x="60" y="24" class="compass-n" text-anchor="middle">N</text>
+          </svg>
+        </div>
+
+        <p class="eyebrow hero-eyebrow">Salón · Spa</p>
+
+        <h1 class="hero-title">
+          <span class="script">Divas</span> del Norte
+        </h1>
+
+        <span class="hero-rule" aria-hidden="true"></span>
+
+        <p class="hero-tagline">Despierta la belleza más femenina y auténtica que hay en ti.</p>
+
+        <div class="hero-buttons">
+          <a href="#reserva" class="btn btn-primary">Reservar cita</a>
+          <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+        </div>
+      </div>
+
+      <a href="#servicios" class="hero-scroll" aria-label="Desplázate para ver más">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- divider -->
+    <div class="section-divider" aria-hidden="true">
+      <svg class="divider-compass" viewBox="0 0 100 100"><path class="compass-star" d="M50 8 L58 42 L92 50 L58 58 L50 92 L42 58 L8 50 L42 42 Z"/></svg>
+    </div>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="services reveal" id="servicios">
+      <div class="section-heading">
+        <p class="eyebrow">Nuestros servicios</p>
+        <h2>Cuidado a tu <span class="script">medida</span></h2>
+        <p class="section-desc">Cada servicio está diseñado para que salgas sintiéndote radiante.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <article class="service-card reveal">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=500&q=80" alt="Corte de cabello profesional" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Corte de cabello</h3>
+            <p>Cortes personalizados según tu rostro y estilo de vida.</p>
+            <span class="price">Bs. 60</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Tinte y coloración de cabello" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Tinte</h3>
+            <p>Color, mechas y balayage con productos de alta calidad.</p>
+            <span class="price">Bs. 180</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Manicure profesional" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Manicure</h3>
+            <p>Cuidado completo de uñas con esmaltado semipermanente.</p>
+            <span class="price">Bs. 50</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=500&q=80" alt="Pedicure spa" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Pedicure</h3>
+            <p>Spa de pies relajante con exfoliación e hidratación.</p>
+            <span class="price">Bs. 60</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=500&q=80" alt="Peinado para evento" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Peinado</h3>
+            <p>Peinados de fiesta, novia o evento con acabado duradero.</p>
+            <span class="price">Bs. 90</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Maquillaje profesional" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Maquillaje</h3>
+            <p>Maquillaje social o de novia, natural o glamoroso.</p>
+            <span class="price">Bs. 120</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <svg class="divider-compass" viewBox="0 0 100 100"><path class="compass-star" d="M50 8 L58 42 L92 50 L58 58 L50 92 L42 58 L8 50 L42 42 Z"/></svg>
+    </div>
+
+    <!-- ===================== RESERVA ===================== -->
+    <section class="booking reveal" id="reserva">
+      <div class="section-heading">
+        <p class="eyebrow">Agenda en línea</p>
+        <h2>Reserva tu <span class="script">cita</span></h2>
+        <p class="section-desc">Completa el formulario y confirmaremos tu cita por WhatsApp.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm" novalidate>
+
+        <div class="form-group">
+          <label for="fullName">Nombre completo</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Ej. María Fernández" autocomplete="name" required aria-describedby="fullNameError">
+          <span class="field-error" id="fullNameError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tunombre@correo.com" autocomplete="email" required aria-describedby="emailError">
+          <span class="field-error" id="emailError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Número de celular</label>
+          <input type="tel" id="phone" name="phone" placeholder="Ej. 70012345" autocomplete="tel" required aria-describedby="phoneError">
+          <span class="field-error" id="phoneError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Servicio</label>
+          <select id="service" name="service" required aria-describedby="serviceError">
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="Corte de cabello">Corte de cabello — Bs. 60</option>
+            <option value="Tinte">Tinte — Bs. 180</option>
+            <option value="Manicure">Manicure — Bs. 50</option>
+            <option value="Pedicure">Pedicure — Bs. 60</option>
+            <option value="Peinado">Peinado — Bs. 90</option>
+            <option value="Maquillaje">Maquillaje — Bs. 120</option>
+          </select>
+          <span class="field-error" id="serviceError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Fecha</label>
+          <input type="date" id="date" name="date" required aria-describedby="dateError">
+          <span class="field-error" id="dateError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Horario</label>
+          <select id="time" name="time" required aria-describedby="timeError">
+            <option value="" disabled selected>Selecciona un horario</option>
+            <optgroup label="Mañana">
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+            </optgroup>
+            <optgroup label="Tarde">
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </optgroup>
+            <optgroup label="Noche">
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+            </optgroup>
+          </select>
+          <span class="field-error" id="timeError" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <svg class="icon icon-inline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Reservar cita
+        </button>
+      </form>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <svg class="divider-compass" viewBox="0 0 100 100"><path class="compass-star" d="M50 8 L58 42 L92 50 L58 58 L50 92 L42 58 L8 50 L42 42 Z"/></svg>
+    </div>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="contact reveal" id="contacto">
+      <div class="section-heading">
+        <p class="eyebrow">Hablemos</p>
+        <h2>Contáctanos</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2Z"/></svg>
+          <h3>Celular</h3>
+          <a href="tel:+59160042152">600 42152</a>
+        </div>
+
+        <div class="contact-card">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 6-10 7L2 6"/></svg>
+          <h3>Correo</h3>
+          <a href="mailto:hola@divasdelnorte.com">hola@divasdelnorte.com</a>
+        </div>
+
+        <div class="contact-card">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <h3>Horario</h3>
+          <p>Lun – Sáb: 09:00 – 20:00</p>
+        </div>
+
+        <div class="contact-card">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <h3>Redes sociales</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram de Divas del Norte">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook de Divas del Norte">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+            </a>
+            <a href="https://wa.me/59160042152" aria-label="WhatsApp de Divas del Norte" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A10.6 10.6 0 0 0 3 17.7L2 22l4.4-1.1A10.6 10.6 0 1 0 20.5 3.5Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== UBICACIÓN ===================== -->
+    <section class="location reveal" id="ubicacion">
+      <div class="section-heading">
+        <p class="eyebrow">Visítanos</p>
+        <h2>Nuestra <span class="script">ubicación</span></h2>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe
+          title="Ubicación de Divas del Norte Salón &amp; Spa"
+          src="https://maps.google.com/maps?q=Bolivia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="brand-compass" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" class="compass-ring"/>
+          <path class="compass-star" d="M50 8 L58 42 L92 50 L58 58 L50 92 L42 58 L8 50 L42 42 Z"/>
+        </svg>
+        <p class="brand-name">Divas del Norte</p>
+        <p class="footer-tag">Salón · Spa</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Enlaces rápidos</h4>
+        <a href="#top">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#reserva">Reserva</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+          <a href="https://wa.me/59160042152" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A10.6 10.6 0 0 0 3 17.7L2 22l4.4-1.1A10.6 10.6 0 1 0 20.5 3.5Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Divas del Norte Salón &amp; Spa — By Daniela Gonzales. Todos los derechos reservados.</p>
+      <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
